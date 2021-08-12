@@ -1,0 +1,50 @@
+<h2>Booking Details</h2>
+        <div>
+            <label for="srch_sour_name"><strong>Soruce Station</strong></label>
+            <input type="text" name="srch_sour_name" id="srch_sour_name" autofocus>
+            
+            <label for="srch_des_name"><strong>Destination Station</strong></label>
+            <input type="text" name="srch_des_name" id="srch_des_name">
+
+            <button>Search</button>
+
+        </div>
+        <br /><br />
+        <section>
+            <table class="booking_list">                
+                <caption><strong> Train List</strong></caption>
+                <thead>
+                    <tr>
+                        <th id="sno">#</th>
+                        <th id="trainNo">Train No</th>
+                        <th id="trainName">Train Name</th>
+                        <th id="fromStation">From Station</th>
+                        <th id="toStation">To Station</th>
+                        <th id="noTicket">No of Tickets</th>
+                        <th id="journeyDate">Journey Date</th>
+                        <th id="ticketAmount">Ticket Amount</th>
+                        <th id="status">Status</th>
+                        <th id="action">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="abc">
+                    <tr *ngFor="let book of book_list">
+                        <td>{{book.sno}}</td>
+                        <td>{{book.trainNo}}</td>
+                        <td>{{book.trainName}}</td>
+                        <td>{{book.fromStation}}</td>
+                        <td>{{book.toStation}}</td>
+                        <td>{{book.noTicket}}</td>
+                        <td>{{book.journeyDate}}</td>
+                        <td>{{book.ticketAmount}}</td>
+                        <td>{{book.status}}</td>
+                        <td>{{book.trainName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+            <button><a href="add_train_adm.html" style="text-decoration:none;" data-toggle="modal"
+                    data-target="#modelId">Add Trains</a></button>
+            <button><a href="index.html" style="text-decoration:none;">Home</a></button>

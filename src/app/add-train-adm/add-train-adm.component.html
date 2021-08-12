@@ -1,0 +1,21 @@
+<h2>Add Trains</h2>
+<form (ngSubmit)="addTrain();">
+    <div class="row">
+        <label for="trainNo">Train No</label>
+        <input type="text" [(ngModel)]="trainNo" name="trainNo" id="trainNo" required autofocus>
+        <br />
+        <br />
+        <label for="trainName">Train Name</label>
+        <input type="text" [(ngModel)]="trainName" name="trainName" id="trainName" required>
+        <br />
+        <br />
+        <label for="noPassenger">No of Passengers Allowed</label>
+        <input type="text" [(ngModel)]="noPassenger" name="noPassenger" id="noPassenger" required>
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button><a routerLink="./list-train-adm" style="text-decoration:none;">List Trains</a> </button>&nbsp;
+        <button><a href="index.html" style="text-decoration:none;">Home</a></button>
+    </div>
+</form>

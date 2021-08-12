@@ -1,0 +1,16 @@
+<h2>User Login Page</h2>
+    <form (ngSubmit)="login()">
+
+        <div class="row">
+        <label for="userName">User Name: <span style="color:red">*</span></label>
+        <input type="text" [(ngModel)]="userName" name="userName" id="userName" placeholder="Enter user name" required>
+         <br /><br />
+        <label for="password">Password: <span style="color:red">*</span></label>
+        <input type="password" [(ngModel)]="password" name="password" id="password" placeholder="Enter Password" required>
+        <br /> <br />
+        <button>Submit</button>
+        <button><a routerLink="/home" style="text-decoration:none;">Home</a></button>
+        </div>
+        
+        <p style="text-align: center;">Don't Have an Account? <a routerLink="/register">Sign-Up</a></p> <br /><br /> <br />
+    </form>

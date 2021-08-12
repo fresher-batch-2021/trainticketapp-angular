@@ -1,0 +1,53 @@
+<h3>List Trains</h3>
+<div>
+    <label for="srch_sour_name"><strong>Soruce Station</strong></label>
+    <input type="text" name="srch_sour_name" id="srch_sour_name" autofocus>
+
+    <label for="srch_des_name"><strong>Destination Station</strong></label>
+    <input type="text" name="srch_des_name" id="srch_des_name">
+
+    <button>Search</button>
+
+</div>
+<br><br>
+<section>
+    <table class="list_train">
+        <caption><strong> Train List</strong></caption>
+        <thead>
+            <tr>
+                <th id="sno">#</th>
+                <th id="trainNo">Train No</th>
+                <th id="trainName">Train Name</th>
+                <th id="noPassenger">No of passengers Allowed</th>
+                <th id="sourceStation">Source Station</th>
+                <th id="destnationStation">Destination Station</th>
+                <th id="arrival">Arrival</th>
+                <th id="depart">Depart</th>
+                <th id="status">Status</th>
+                <th id="action">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="listTrainData">
+            <tr *ngFor="let task of train_list">
+                <td>{{task.sno}}</td>
+                <td>{{task.trainNo}}</td>
+                <td>{{task.trainName}}</td>
+                <td>{{task.noPassenger}}</td>
+                <td>{{task.sourceStation}}</td>
+                <td>{{task.destnationStation}}</td>
+                <td>{{task.arrival}}</td>
+                <td>{{task.depart}}</td>
+                <td>{{task.status}}</td>
+                <td>{{task.action}}</td>
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button><a href="add_train_adm.html" style="text-decoration:none;" data-toggle="modal" data-target="#modelId">Add
+            Trains</a></button>
+    <button><a href="index.html" style="text-decoration:none;">Home</a></button>

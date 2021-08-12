@@ -1,0 +1,38 @@
+
+        <h2>Bookings</h2>
+        <form onsubmit="bookingForm();">
+            <div class="row">
+                <label for="trainNo">Train No: </label>
+                <input type="text" name="trainNo" id="trainNo" required autofocus>
+                <br />
+                <br />
+                <label for="trainName">Train Name: </label>
+                <input type="text" name="trainName" id="trainName" required>
+                <br />
+                <br />
+                <label for="fromStation">From Station: </label>
+                <input type="text" name="fromStation" id="fromStation" required>
+                <br />
+                <br />
+                <label for="toStation">To Station: </label>
+                <input type="text" name="toStation" id="toStation" required>
+                <br />
+                <br />
+                <label for="noTicket">No of Tickets: </label>
+                <input type="text" name="noTicket" id="noTicket" required>
+                <br />
+                <br />
+                <label for="journeyDate">Journey Date: </label>
+                <input type="date" name="journeyDate" id="journeyDate" required>
+                <br />
+                <br />
+                <label for="ticketAmount">Ticket Amount: </label>
+                <input type="text" name="ticketAmount" id="ticketAmount" value="Rs. 560" required readonly>
+                <br />
+                <br />
+                <button>Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form><br><br>
+        <button><a routerLink="list-train" style="text-decoration:none;">List Trains</a> </button>&nbsp;
+        <button><a href="index.html" style="text-decoration:none;">Home</a></button>
