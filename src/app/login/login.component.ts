@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   password: string="";
-  userName: string="";
+  email: string="";
 
   constructor() { }
 
@@ -18,24 +19,39 @@ export class LoginComponent implements OnInit {
     // alert("Login Button Clicked");
     // alert("User Name: " + this.userName);
     // alert("Password: " + this.password);
-    let userName=this.userName;
-    let password1=this.password;
-    if(userName == "" || userName == null || userName.trim() == "" || userName != "admin123"){
-        alert("Invalid User Name");
+    let email=this.email;
+    let password=this.password;
+    let formvalues = {
+      "email": email,
+      "password": password
+  };
+    if(email == "" || email == null || email.trim() == ""){
+        alert("Invalid Email");
     }
     else{
         
-    if(password1.length < 4 || password1 != "1234"){
+    if(password.length < 4){
         alert("Invalid Password");
     }
-    else{
+      else{
+        const url="https://product-mock-api.herokuapp.com/trainapp/api/v1/auth/login";
+        axios.post(url,formvalues).then(res=>{
+            alert("login succesful");
+            window.location.href="list-train";
+        }).catch(err=>{
+            alert("login failed");
+        });
        
-        alert("Form submission completed");
-    window.location.href = "list_train.html";
+      
     }
-}
+
 
 
 
   }
 }
+
+
+
+  }
+

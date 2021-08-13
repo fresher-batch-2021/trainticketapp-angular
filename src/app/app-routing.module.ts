@@ -5,6 +5,7 @@ import { AddTrainAdmComponent } from './add-train-adm/add-train-adm.component';
 import { BookingListComponent } from './booking-list/booking-list.component';
 import { BookingComponent } from './booking/booking.component';
 import { IndexComponent } from './index/index.component';
+import { ListTrainAdmComponent } from './list-train-adm/list-train-adm.component';
 import { ListTrainComponent } from './list-train/list-train.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'booking',component:BookingComponent},
   {path:'booking-list',component:BookingListComponent},
   {path:'aboutus',component:AboutusComponent},
+  {path:'list-train-adm',component:ListTrainAdmComponent},
   {path:'', redirectTo:'Home', pathMatch:'full'}
   ];
 
